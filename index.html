@@ -5,17 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Home/css/home.css">
+    <link rel="stylesheet" href="./Home/css/header.css">
+    <link rel="stylesheet" href="./style.css">
     <title>THIRAN2023 | HOME</title>
 </head>
-<body>
+<body class="home-bg">
+
+    <header class="block glow">
+        <div class="header-left">
+            <div class="logo">
+                <img src="./Home/images/thiran-logo.png" alt="" height="78px" >
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="./event.html" >Events</a>
+                    </li>
+                    <li>
+                        <a href="./schedule.html">Schedule</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./team.html">Team</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="login-signup">
+                <a href="./register.html">REGISTER</a> 
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
     <div id="large-header" class="large-header">
         <canvas id="demo-canvas"></canvas>
-          <h1 class="main-title">Thiran <span class="thin">2023</span></h1>
-      </div>
-      
-      
-      </div>
+        <!-- <img src="/Home/images/thiran-logo.png" height="200px" width="100%" class="main-title"> -->
+          <h1 class="main-title">T H I R A N - <span class="thin">2 0 2 3</span></h1>
+    </div>
+   
 </body>
+<script>
+    hamburger = document.querySelector(".hamburger");
+    nav = document.querySelector("nav");
+    hamburger.onclick = function() {
+        nav.classList.toggle("active");
+    }
+</script>
 <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
 <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
 <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
@@ -206,94 +251,7 @@ function getDistance(p1, p2) {
 
 })();
 </script>
-<!-- thiran title -->
-<script>
-    const elts = {
-    text1: document.getElementById("text1"),
-    text2: document.getElementById("text2")
-};
 
-const texts = [
-    "If",
-    "You",
-    "Like",
-    "It",
-    "Please",
-    "Give",
-    "a Love",
-    ":)",
-    "by @DotOnion"
-];
 
-const morphTime = 1;
-const cooldownTime = 0.25;
 
-let textIndex = texts.length - 1;
-let time = new Date();
-let morph = 0;
-let cooldown = cooldownTime;
-
-elts.text1.textContent = texts[textIndex % texts.length];
-elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-
-function doMorph() {
-    morph -= cooldown;
-    cooldown = 0;
-
-    let fraction = morph / morphTime;
-
-    if (fraction > 1) {
-        cooldown = cooldownTime;
-        fraction = 1;
-    }
-
-    setMorph(fraction);
-}
-
-function setMorph(fraction) {
-    elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-    elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-
-    fraction = 1 - fraction;
-    elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-    elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-
-    elts.text1.textContent = texts[textIndex % texts.length];
-    elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-}
-
-function doCooldown() {
-    morph = 0;
-
-    elts.text2.style.filter = "";
-    elts.text2.style.opacity = "100%";
-
-    elts.text1.style.filter = "";
-    elts.text1.style.opacity = "0%";
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-
-    let newTime = new Date();
-    let shouldIncrementIndex = cooldown > 0;
-    let dt = (newTime - time) / 1000;
-    time = newTime;
-
-    cooldown -= dt;
-
-    if (cooldown <= 0) {
-        if (shouldIncrementIndex) {
-            textIndex++;
-        }
-
-        doMorph();
-    } else {
-        doCooldown();
-    }
-}
-
-animate();
-
-</script>
 </html>

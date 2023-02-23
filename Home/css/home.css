@@ -2,7 +2,7 @@
 #large-header {
 	position: relative;
 	width: 100%;
-	background: #333;
+	/* background: #333; */
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
@@ -11,7 +11,14 @@
 
 #large-header {
 	/* filter: blur(5px); */
+	/* background-image: url('../images/blue-purple-technology-circuit_73426-205\ \(1\).jpg'); */
+}
+
+.home-bg {
 	background-image: url('../images/blue-purple-technology-circuit_73426-205\ \(1\).jpg');
+	background-size: cover;
+	overflow: hidden;
+
 }
 
 .main-title {
@@ -22,8 +29,8 @@
 	text-align: center;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
 }
 
 .demo-1 .main-title {
@@ -46,12 +53,11 @@
 
 
 
-  
+
 .large-header .main-title {
-	font-family:  'Roboto', sans-serif;
 	font-size: 70px;
 	font-weight: 600;
 	color: #fdfdfe;
 	text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
-	  0px 0px 20px #b393d3;
-  }
+		0px 0px 20px #b393d3;
+}
