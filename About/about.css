@@ -1,0 +1,48 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+.about-container{
+    min-height: 100vh;
+    background: #08071d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: url("../Team/teams_imgs/22MX225-Sushma\ S.jpg") no-repeat center center/cover;  */
+    background: linear-gradient(0deg, #290926, rgb(29, 4, 48));
+}
+
+.about-container form{
+    z-index: 0;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.about-container form h1{
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+
+.about-container p{
+    color: white;
+    
+}
+
+.inside-container{
+    margin:2% 5% 5% 5%;
+}
