@@ -15,19 +15,20 @@ p1name.onblur=()=>{
     let n= p1name.value;
     let regex = /^[a-zA-Z ]+$/;
     let regex2 = /^[a-zA-Z]+ [a-zA-Z]+$/;
-    if(!regex.test(n)){
+
+    if(!regex2.test(n) && (!regex.test(n))){
         alert("invalid name");
+        p1name.value=""
     }
-    else if(!regex.test(n)){
-        alert("invalid name");
-    }
+  
 }
 
 p1roll.onchange=()=>{
     let n= p1roll.value;
     let regex = /^[a-zA-Z0-9]+$/;
     if(!regex.test(n)){
-        alert("invalid roll");
+        alert("invalid roll number");
+        p1roll.value=""
         
     }
     
@@ -38,6 +39,7 @@ p1mail.onchange=()=>{
     let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(!regex.test(n)){
         alert("invalid Email");
+        p1mail.value=""
     }
     
 }
@@ -46,7 +48,8 @@ p1phone.onchange=()=>{
     let n= p1phone.value;
     let regex = /^[0-9]{10}$/;
     if(!regex.test(n)){
-        alert("invalid Phone");
+        alert("invalid mobile number");
+        p1phone.value=""
     }
     
 }
@@ -54,8 +57,10 @@ p1phone.onchange=()=>{
 department.onchange=()=>{
     let n= department.value;
     let regex = /^[A-Za-z]+$/;
-    if(!regex.test(n)){
+    let regex2 = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    if(!regex2.test(n) && (!regex.test(n))){
         alert("invalid Department");
+        department.value=""
     }
     
 }
@@ -65,11 +70,11 @@ year.onchange=()=>{
     let regex = /^[0-9]{1}$/;
     if(!regex.test(n)){
         alert("invalid year");
+        year.value=""
+
     }
     
 }
-
-
 
 syed.onchange=()=>
 {
