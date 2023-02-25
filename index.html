@@ -6,61 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Home/css/home.css">
     <link rel="stylesheet" href="./Home/css/header.css">
-    <link rel="stylesheet" href="./style.css">
     <title>THIRAN2023 | HOME</title>
 </head>
-<body class="home-bg">
-
-    <header class="block glow">
-        <div class="header-left">
-            <div class="logo">
-                <img src="./Home/images/thiran-logo.png" alt="" height="78px" >
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="./index.html" class="active">Home</a>
-                    </li>
-                    <li>
-                        <a href="./event.html" >Events</a>
-                    </li>
-                    <li>
-                        <a href="./schedule.html">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="./about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="./team.html">Team</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header-right">
-            <div class="login-signup">
-                <a href="./register.html">REGISTER</a>
-            </div>
-            <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </header>
+<body>
+    
     <div id="large-header" class="large-header">
-        <canvas id="demo-canvas"></canvas>
-        <!-- <img src="/Home/images/thiran-logo.png" height="200px" width="100%" class="main-title"> -->
-          <h1 class="main-title">T H I R A N - <span class="thin">2 0 2 3</span></h1>
-    </div>
-
+        <div class="nav block glow" id="navigation-bar"></div>
+        <canvas id="demo-canvas" class="canva-an"></canvas>
+          <h1 class="main-title" style="visibility:visible" id="thiran-title">THIRAN - 2023</h1>
+      </div>
 </body>
-<script>
-    hamburger = document.querySelector(".hamburger");
-    nav = document.querySelector("nav");
-    hamburger.onclick = function() {
-        nav.classList.toggle("active");
-    }
-</script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
 <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
 <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
@@ -250,8 +206,27 @@ function getDistance(p1, p2) {
 }
 
 })();
+
 </script>
-
-
+<script>
+    $(function(){
+      $("#navigation-bar").load("nav.html");
+    });
+</script>
+<!-- <script>
+    let title=document.getElementById("thiran-title");
+    let checkIcon=document.getElementById("nav-check");
+    if (!checkIcon || !text) {
+        console.log('Error: could not find required elements');
+      }
+    
+        checkIcon.addEventListener('change', function() {
+            if(this.checked) {
+                title.style.display = 'none';
+            } else {
+              title.style.visibility = 'visible';
+            }
+          });
+</script> -->
 
 </html>
