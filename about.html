@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Contact Us</title>
     <link rel="stylesheet" href="./About/about.css">
+    <link rel="stylesheet" href="./Home/css/header.css">
+    <link rel="stylesheet" href="./style.css">
     
 </head>
 <body>
+    <div class="nav" id="navigation-bar"></div>
     <div class="about-container">
         <form>
             <h1>About us</h1>
@@ -21,5 +24,11 @@
     </div>
 </div>
 <script src="scripts.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(function(){
+      $("#navigation-bar").load("nav.html");
+    });
+</script>
 </body>
 </html>

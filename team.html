@@ -7,8 +7,11 @@
     <title>THIRAN2023 | TEAM</title>
     <link rel="stylesheet" href="./Team/team.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./Home/css/header.css">
+    <link rel="stylesheet" href="./Home/css/home.css">
 </head>
 <body>
+    <div class="nav" id="navigation-bar"></div>
     <h1 class="teamHeading">SOFTWARE DEVELOPMENT TEAM</h1>
     <div class="main">
         <div class="profile-card">
@@ -95,6 +98,12 @@
         </div>
        </div>
 </body>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(function(){
+      $("#navigation-bar").load("nav.html");
+    });
+</script>
 </html>
 
 
